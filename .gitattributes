@@ -1,0 +1,13 @@
+# Nothing in this repo gets its line endings rewritten on checkout.
+#
+# The goldens are DATA and the manifest gates them by SHA-256, so a checkout that turns their LF
+# into CRLF fails that gate on every file at once - which reads as "the goldens were edited", the
+# one thing the digest exists to catch. It is not hypothetical: this machine has core.autocrlf=true,
+# and a fresh worktree of this repo aborted the suite on setup_finder_rollfree_live.json before a
+# single case ran. The working copies that pass do so because a copy tool wrote them, not because
+# the checkout left them alone.
+#
+# The same applies to the C++: tools/port/extract.py re-derives every generated file and DIFFS it
+# against what is committed, so a line-ending rewrite would show up there as the port having
+# drifted from the decomp.
+* -text

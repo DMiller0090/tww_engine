@@ -1,0 +1,23 @@
+build/
+build-linux-*/
+_notes/
+__pycache__/
+*.pyc
+*.obj
+*.exe
+*.lib
+*.pdb
+*.ilk
+run.txt
+build-vs/
+tests/iso.txt
+
+# Private: process, port tracking, goldens and the tools that make them
+SESSION_PROMPT.md
+PORT_RATCHET
+history/
+.githooks/
+tools/
+tests/goldens/
+tests/port_list.json
+tests/test_port_manifest.cpp
