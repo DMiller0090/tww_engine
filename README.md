@@ -1,16 +1,7 @@
 # tww_engine
 
 Link's player physics from The Legend of Zelda: The Wind Waker, in C++. The code is ported from
-the [zeldaret/tww](https://github.com/zeldaret/tww) decompilation and matches the game bit for bit
-(0 ULP). It is a library only, with no UI and no file I/O.
-
-## No game data
-
-Nothing from the game ships here. The caller reads the disc and hands over the bytes:
-
-- **a room's collision** as a `RoomDzb` (`engine/room.h`), the tables of the room's `.dzb`;
-- **Link's model and animations** as a `LinkAssets` (`engine/link_assets.h`): `cl.bdl` from
-  `res/Object/Link.arc` and the `.bck` files from `res/Object/LkAnm.arc`, decompressed.
+the [zeldaret/tww](https://github.com/zeldaret/tww) decompilation.
 
 ## Using it
 
