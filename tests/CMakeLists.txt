@@ -63,6 +63,7 @@ add_executable(tww_engine_tests
   test_cam_subject_exit.cpp
   test_cam_l_held.cpp
   test_cam_turnarounds.cpp
+  test_cam_far_exit.cpp
   test_session_camera.cpp
   test_threads.cpp
 )
